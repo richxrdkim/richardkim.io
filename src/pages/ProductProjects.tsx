@@ -3,16 +3,6 @@ import ProjectCard from "../components/ProjectCard";
 export default function ProductProjects() {
   const pmProjects = [
     {
-      title: "Bite-Sized Health Records",
-      blurb:
-        "Redesigned how physicians consume patient data by surfacing key FHIR information through contextual LLM summarization.",
-      meta: "Miro, Google Slides, Figma",
-      links: [
-        { name: "Miro", url: "https://miro.com/app/board/YOUR_LINK" },
-        { name: "Slides", url: "https://docs.google.com/presentation/d/YOUR_LINK" },
-      ],
-    },
-    {
       title: "Reverse Job Search",
       blurb:
         "An AI-driven job-matching concept that flips traditional recruiting by letting companies discover candidates proactively.",
