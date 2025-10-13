@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-/** Allow calling the navbar's global page transition */
 declare global {
   interface Window {
     __runPageTransition?: (path: string) => void;
@@ -21,34 +20,36 @@ export default function Hero() {
   };
 
   return (
-    // push below the sticky 64px navbar + use dynamic vh to avoid iOS bar jumps
-    <section className="relative mt-16 min-h-[calc(100dvh-64px)] overflow-hidden">
-      {/* Background */}
+    <section className="relative h-[100svh] overflow-hidden">
+      {/* Background (pulled up by the navbar height) */}
       <img
         src="/images/hero.png"
         alt="Hero background"
-        className="absolute inset-0 h-full w-full object-cover object-center z-0"
+        className="absolute inset-x-0 -top-16 z-0 h-[calc(100%+64px)] w-full object-cover object-center"
         loading="eager"
         decoding="async"
         fetchPriority="high"
       />
 
-      {/* Grid & gradient overlays (ignore clicks) */}
-      <div className="hero-grid absolute inset-0 h-full pointer-events-none z-0" aria-hidden="true" />
+      {/* Grid & gradient overlays (match the same -top-16 offset) */}
       <div
-        className="absolute inset-0 h-full bg-gradient-to-t from-black/70 via-black/40 to-transparent pointer-events-none z-0"
+        className="hero-grid absolute inset-x-0 -top-16 z-0 h-[calc(100%+64px)] pointer-events-none"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-x-0 -top-16 z-0 h-[calc(100%+64px)] bg-gradient-to-t from-black/70 via-black/40 to-transparent pointer-events-none"
         aria-hidden="true"
       />
 
-      {/* Content (ensure on top) */}
-      <div className="relative z-10 flex min-h-[calc(100dvh-64px)] w-full items-end site-pad pb-24 sm:pb-32 lg:pb-40">
+      {/* Content (pad down so it doesn't sit under the navbar) */}
+      <div className="relative z-10 flex h-full w-full items-end site-pad pt-16 pb-24 sm:pb-32 lg:pb-40">
         <div className="max-w-4xl text-white">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
             Architecture → Product & Code
           </div>
 
-          {/* smaller base size + tighter line-height + allow wrapping on phones */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight break-words">
+          {/* Mobile-safe sizing & wrapping */}
+          <h1 className="font-bold leading-tight text-3xl sm:text-5xl lg:text-6xl break-words">
             <span>PRODUCT</span>
             <span className="mx-2 text-white/70">/</span>
             <span className="tracking-[.02em] text-white">SOFTWARE</span>
