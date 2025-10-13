@@ -7,11 +7,23 @@ export default function Hero() {
       <img
         src="/images/hero.png"
         alt="Hero background"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-center z-0"
+        loading="eager"
+        decoding="async"
       />
 
-      {/* Content */}
-      <div className="relative flex h-full w-full items-end site-pad pb-24 sm:pb-32 lg:pb-40">
+      {/* Grid & gradient overlays (ignore clicks) */}
+      <div
+        className="hero-grid absolute inset-0 h-full pointer-events-none z-0"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0 h-full bg-gradient-to-t from-black/70 via-black/40 to-transparent pointer-events-none z-0"
+        aria-hidden="true"
+      />
+
+      {/* Content (ensure on top) */}
+      <div className="relative z-10 flex h-full w-full items-end site-pad pb-24 sm:pb-32 lg:pb-40">
         <div className="max-w-4xl text-white">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
             Architecture → Product & Code
