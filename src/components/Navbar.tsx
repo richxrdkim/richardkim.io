@@ -79,7 +79,7 @@ export default function Navbar() {
               initial={{ y: "-100%" }}
               animate={{ y: 0 }}
               exit={{ y: "-100%" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.7, ease: [0.36, 1, 0.3, 1] }}
               onClick={() => setMenuOpen(false)}
             >
               <div
@@ -151,7 +151,7 @@ const PageTransition = forwardRef<PageTransitionHandle>((_, ref) => {
       // 1) slide DOWN to cover
       await controls.start({
         y: 0,
-        transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+        transition: { duration: 0.7, ease: [0.36, 1, 0.3, 1] },
       });
 
       // 2) navigate while covered
@@ -164,7 +164,7 @@ const PageTransition = forwardRef<PageTransitionHandle>((_, ref) => {
       // 4) slide UP to reveal
       await controls.start({
         y: "-100%",
-        transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+        transition: { duration: 0.7, ease: [0.36, 1, 0.3, 1] },
       });
 
       inFlightRef.current = false;
@@ -201,7 +201,7 @@ function MenuLink({
           className={`block font-semibold leading-none ${isActive ? "opacity-85" : "opacity-100"}`}
           variants={{
             hidden: { y: 32, opacity: 0 },
-            show:   { y: 0,  opacity: 1, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+            show:   { y: 0,  opacity: 1, transition: { duration: 0.7, ease: [0.36, 1, 0.3, 1] } },
           }}
         >
           <span className="text-white text-5xl sm:text-6xl md:text-7xl">{label}</span>

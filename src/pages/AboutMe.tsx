@@ -17,7 +17,7 @@ export default function AboutMe() {
 
         {/* Image */}
         <img
-          src="/images/campphoto.jpg"
+          src="/images/PP.jpg"
           alt="Richard Kim"
           className="h-48 w-48 rounded-2xl object-cover shadow-md sm:h-56 sm:w-56"
           loading="lazy"

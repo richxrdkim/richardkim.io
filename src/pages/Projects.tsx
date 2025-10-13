@@ -1,9 +1,28 @@
 import { Link } from "react-router-dom";
 
+/** Let this page call the navbar's overlay transition */
+declare global {
+  interface Window {
+    __runPageTransition?: (path: string) => void;
+  }
+}
+
 function Card({ to, title, desc }: { to: string; title: string; desc: string }) {
+  const handleClick = (e: React.MouseEvent) => {
+    // keep new-tab / modifier-click behavior
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;
+
+    const run = window.__runPageTransition;
+    if (run) {
+      e.preventDefault();
+      run(to);
+    }
+  };
+
   return (
     <Link
       to={to}
+      onClick={handleClick}
       className="group rounded-2xl border border-gray-200 p-6 transition hover:border-blue-500"
     >
       <h3 className="text-xl font-semibold">{title}</h3>
