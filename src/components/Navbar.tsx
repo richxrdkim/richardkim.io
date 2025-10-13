@@ -9,6 +9,12 @@ import {
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 
+declare global {
+  interface Window {
+    __runPageTransition?: (path: string) => void;
+  }
+}
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const overlayRef = useRef<PageTransitionHandle>(null);
@@ -18,6 +24,14 @@ export default function Navbar() {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  /* 🔸 ADDED: expose the overlay transition globally so other components can call it */
+  useEffect(() => {
+    window.__runPageTransition = (path: string) => overlayRef.current?.run(path);
+    return () => {
+      window.__runPageTransition = undefined;
+    };
   }, []);
 
   const startHomeTransition = () => {
