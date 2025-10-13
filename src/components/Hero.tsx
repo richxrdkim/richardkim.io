@@ -12,9 +12,8 @@ export default function Hero() {
   const btn =
     "inline-flex items-center rounded-lg border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur hover:border-white/60";
 
-  // Intercept normal left-click to run the global transition; keep new-tab behavior intact
   const go = (e: React.MouseEvent, path: string) => {
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return; // allow new tab
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;
     if (window.__runPageTransition) {
       e.preventDefault();
       window.__runPageTransition(path);
@@ -22,7 +21,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-[calc(100svh-64px)] overflow-hidden">
+    // push below the sticky 64px navbar + use dynamic vh to avoid iOS bar jumps
+    <section className="relative mt-16 min-h-[calc(100dvh-64px)] overflow-hidden">
       {/* Background */}
       <img
         src="/images/hero.png"
@@ -41,19 +41,20 @@ export default function Hero() {
       />
 
       {/* Content (ensure on top) */}
-      <div className="relative z-10 flex h-full w-full items-end site-pad pb-24 sm:pb-32 lg:pb-40">
+      <div className="relative z-10 flex min-h-[calc(100dvh-64px)] w-full items-end site-pad pb-24 sm:pb-32 lg:pb-40">
         <div className="max-w-4xl text-white">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
             Architecture → Product & Code
           </div>
 
-          <h1 className="text-4xl font-bold leading-none sm:text-6xl">
+          {/* smaller base size + tighter line-height + allow wrapping on phones */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight break-words">
             <span>PRODUCT</span>
             <span className="mx-2 text-white/70">/</span>
             <span className="tracking-[.02em] text-white">SOFTWARE</span>
           </h1>
 
-          <p className="mt-3 max-w-2xl text-lg text-white/90">
+          <p className="mt-3 max-w-2xl text-base sm:text-lg text-white/90 break-words">
             Architectural principles, engineering fluency, and product results.
           </p>
 
