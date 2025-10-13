@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="relative h-[calc(100svh-64px)] overflow-hidden">
@@ -6,13 +8,7 @@ export default function Hero() {
         src="/images/hero.png"
         alt="Hero background"
         className="absolute inset-0 h-full w-full object-cover object-center"
-        loading="eager"
-        decoding="async"
       />
-
-      {/* Grid & gradient overlays */}
-      <div className="hero-grid absolute inset-0 h-full" />
-      <div className="absolute inset-0 h-full bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
 
       {/* Content */}
       <div className="relative flex h-full w-full items-end site-pad pb-24 sm:pb-32 lg:pb-40">
@@ -32,18 +28,18 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex gap-3">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="inline-flex items-center rounded-lg border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur hover:border-white/60"
             >
               View Projects
-            </a>
-            <a
-              href="/about-me"
+            </Link>
+            <Link
+              to="/about-me"
               className="inline-flex items-center rounded-lg border border-white/30 px-4 py-2 text-sm font-medium text-white hover:border-white/60"
             >
               About Me
-            </a>
+            </Link>
           </div>
         </div>
       </div>
