@@ -48,7 +48,7 @@ export default function Hero() {
             </Link>
             <Link
               to="/about-me"
-              className="inline-flex items-center rounded-lg border border-white/30 px-4 py-2 text-sm font-medium text-white hover:border-white/60"
+              className="inline-flex items-center rounded-lg border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur hover:border-white/60"
             >
               About Me
             </Link>
