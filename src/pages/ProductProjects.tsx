@@ -17,8 +17,7 @@ export default function ProductProjects() {
         "Personal finance decision tool that visualizes trade-offs between debt repayment, investing, and budgeting to help users plan smarter.",
       meta: "Miro, Google Slides, Notion",
       links: [
-        { name: "Miro", url: "YOUR_LINK" },
-        { name: "Slides", url: "YOUR_LINK" },
+        { name: "Miro", url: "https://miro.com/app/board/uXjVJ4vf-Hk=/" },
       ],
     },
   ];
