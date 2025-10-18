@@ -21,7 +21,7 @@ export default function ProductProjects() {
       ],
     },
     {
-      title: "LocalLoop",
+      title: "LocalLoop (Coming Soon)",
       blurb:
         "A hyperlocal marketplace connecting residents to nearby businesses, services, and events in real time to strengthen community ecosystems.",
       meta: "Figma, Notion, Google Slides",
@@ -30,7 +30,7 @@ export default function ProductProjects() {
       ],
     },
     {
-      title: "ArcLens",
+      title: "ArcLens (Coming Soon)",
       blurb:
         "An AI-powered productivity layer that summarizes, organizes, and prioritizes tasks and documents across tools to reduce cognitive load.",
       meta: "Miro, Loom, Notion",
@@ -39,7 +39,7 @@ export default function ProductProjects() {
       ],
     },
     {
-      title: "CampusLifeline",
+      title: "CampusLifeline (Coming Soon)",
       blurb:
         "A campus safety and wellness platform that centralizes emergency alerts, peer support, and resource requests into one connected system.",
       meta: "Figma, Miro, Google Slides",
@@ -48,7 +48,7 @@ export default function ProductProjects() {
       ],
     },
     {
-      title: "ValorLink",
+      title: "ValorLink (Coming Soon)",
       blurb:
         "A Riot-integrated feature for Valorant that matches players based on communication style, playtime, and role synergy to create stable teams.",
       meta: "Miro, Google Slides",
@@ -57,7 +57,7 @@ export default function ProductProjects() {
       ],
     },
     {
-      title: "YouTube Creator Collabs",
+      title: "YouTube Creator Collabs (Coming Soon)",
       blurb:
         "A native feature allowing creators to co-stream and co-publish videos seamlessly, improving discoverability and engagement through shared audiences.",
       meta: "Miro, Notion, Figma",
@@ -66,7 +66,7 @@ export default function ProductProjects() {
       ],
     },
     {
-      title: "Spotify Seasons",
+      title: "Spotify Seasons (Coming Soon)",
       blurb:
         "An extension of Spotify Wrapped introducing seasonal recaps — spring, summer, fall, and winter — to sustain engagement year-round.",
       meta: "Miro, Google Slides",
