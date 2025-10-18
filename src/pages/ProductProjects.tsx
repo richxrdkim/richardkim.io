@@ -6,7 +6,7 @@ export default function ProductProjects() {
       title: "Reverse Job Search",
       blurb:
         "An AI-driven job-matching concept that flips traditional recruiting by letting companies discover candidates proactively.",
-      meta: "Miro, Google Slides",
+      meta: "Miro",
       links: [
         { name: "Miro", url: "https://miro.com/app/board/uXjV7VV778=/?share_link_id=476245930313" },
       ],
@@ -15,7 +15,7 @@ export default function ProductProjects() {
       title: "Kompas",
       blurb:
         "Personal finance decision tool that visualizes trade-offs between debt repayment, investing, and budgeting to help users plan smarter.",
-      meta: "Miro, Google Slides, Notion",
+      meta: "Miro",
       links: [
         { name: "Miro", url: "https://miro.com/app/board/uXjVJ4vf-Hk=/" },
       ],
@@ -24,9 +24,9 @@ export default function ProductProjects() {
       title: "LocalLoop (Coming Soon)",
       blurb:
         "A hyperlocal marketplace connecting residents to nearby businesses, services, and events in real time to strengthen community ecosystems.",
-      meta: "Figma, Notion, Google Slides",
+      meta: "Figjam",
       links: [
-        { name: "Miro", url: "https://miro.com/app/board/uXjVJ7localLoop" },
+        { name: "Figjam", url: "https://miro.com/app/board/uXjVJ7localLoop" },
       ],
     },
     {
