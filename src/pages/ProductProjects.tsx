@@ -8,7 +8,7 @@ export default function ProductProjects() {
         "An AI-driven job-matching concept that flips traditional recruiting by letting companies discover candidates proactively.",
       meta: "Miro",
       links: [
-        { name: "Miro", url: "https://miro.com/app/board/uXjV7VV778=/?share_link_id=476245930313" },
+        { name: "Miro", url: "https://miro.com/app/board/uXjVJ4PCz24=/" },
       ],
     },
     {
